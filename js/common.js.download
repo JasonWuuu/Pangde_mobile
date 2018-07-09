@@ -1,0 +1,26 @@
+
+//navList
+window.onscroll = function(){
+    var scrollTop = document.documentElement.scrollTop ||document.body.scrollTop;
+    var title =document.getElementById("title");
+    var title2=document.getElementById("nav");
+
+    if(scrollTop>45){
+        title.style.opacity="0.7";
+        title2.style.opacity="0.8";
+    }else{
+        title.style.opacity="1";
+        title2.style.opacity="1";
+    }
+};
+$(document).ready(
+    function(){
+        $(".search").on("mouseover",function(){
+            var d_height=$(".search").find("dl").eq(0).height();
+            $(".search").find("dl").each(function(){
+                $(this).css("height",d_height);
+            });
+        })
+
+    }
+);
